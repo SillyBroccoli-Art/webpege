@@ -5,24 +5,72 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>ホーム | ブログタイトル</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7;}
-    header { background: #2c3e50; color: #fff; padding: 20px 0; text-align: center;}
-    nav { background: #34495e; padding: 10px 0; text-align: center;}
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #F7F7F7;}
+    header { background: #2C3E50; color: #fff; padding: 20px 0; text-align: center;}
+    nav { background: #34495E; padding: 10px 0; text-align: center;}
     nav a { color: #fff; margin: 0 15px; text-decoration: none;}
+    .recent-articles-wrapper {
+      background: #ECECEC;
+      padding: 20px 0 10px 0;
+      text-align: center;
+    }
+    .recent-articles {
+      display: inline-block;
+      text-align: left;
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+    }
+    .recent-articles li {
+      display: inline-block;
+      margin-right: 25px;
+      vertical-align: top;
+    }
+    .recent-articles a {
+      color: #34495E;
+      text-decoration: none;
+      font-weight: bold;
+    }
     main { max-width: 800px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 10px;}
     ul.article-list { list-style: none; padding: 0; }
-    ul.article-list li { margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+    ul.article-list li { display: flex; align-items: flex-start; margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
     ul.article-list li:last-child { border-bottom: none; }
-    .article-title { font-size: 1.2em; margin: 0 0 5px 0;}
+    .thumbnail {
+       height: 100px; object-fit: cover;
+      margin-right: 20px; border-radius: 6px; border: 1px solid #ccc;
+      flex-shrink: 0;
+    }
+    .article-content { flex: 1;}
+    .article-title { font-size: 1.2em; margin: 0 0 5px 0; }
     .article-date { color: #888; font-size: 0.9em; margin-bottom: 10px;}
-    footer { background: #2c3e50; color: #fff; text-align: center; padding: 15px 0; margin-top: 30px;}
+    footer { background: #2C3E50; color: #fff; text-align: center; padding: 15px 0; margin-top: 30px;}
   </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9S6N051Y5B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9S6N051Y5B');
+  </script>
 </head>
 <body>
   <header>
     <h1>部屋シネマ</h1>
     <p>好きを布教したい</p>
   </header>
+  <!-- 最近の記事欄（上部に配置） -->
+  <div class="recent-articles-wrapper">
+    <strong>最近の記事：</strong>
+    <ul class="recent-articles">
+      <li>
+        <a href="article01.html">インターステラー</a>
+      </li>
+      <li>
+        <a href="article02.html">未定</a>
+      </li>
+      <!-- ここに記事を追加可能 -->
+    </ul>
+  </div>
   <nav>
     <a href="home.html">ホーム</a>
     <a href="profile.html">プロフィール</a>
@@ -32,16 +80,22 @@
     <h2>最新記事一覧</h2>
     <ul class="article-list">
       <li>
-        <a class="article-title" href="article01.html">インターステラー</a>
-        <div class="article-date">投稿日: 2024-06-10</div>
-        <div>記事1の概要やイントロダクションを書きます。</div>
+        <img src="picture/インターステラーポスター.jpg" alt="インターステラー" class="thumbnail" height="20">
+        <div class="article-content">
+          <a class="article-title" href="article01.html">インターステラー</a>
+          <div class="article-date">投稿日: 2024-06-10</div>
+          <div>洋画にハマったきっかけの映画</div>
+        </div>
       </li>
       <li>
-        <a class="article-title" href="article002.html">ブログ記事タイトル2</a>
-        <div class="article-date">投稿日: 2024-06-05</div>
-        <div>記事2の概要やイントロダクション。</div>
+        <img src="画像"  class="thumbnail">
+        <div class="article-content">
+          <a class="article-title" href="article02.html">未定</a>
+          <div class="article-date">投稿日: 2025-00-00</div>
+          <div>未定</div>
+        </div>
       </li>
-      <!-- 必要に応じて<li>で記事を追加 -->
+      <!-- 必要に応じて記事（li）を追加 -->
     </ul>
   </main>
   <footer>
